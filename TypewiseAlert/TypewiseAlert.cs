@@ -30,21 +30,15 @@ namespace TypewiseAlert
         };
         public static int findUpperLimit(CoolingType coolingType)
         {
-            int limit = 0;
-            switch (coolingType)
+            if (coolingType == CoolingType.PASSIVE_COOLING)
             {
-                case CoolingType.PASSIVE_COOLING:
-                    limit = 35;
-                    break;
-                case CoolingType.HI_ACTIVE_COOLING:
-                    limit = 45;
-                    break;
-                case CoolingType.MED_ACTIVE_COOLING:
-                    limit = 40;
-                    break;
+                return 35;
             }
-
-            return limit;
+            if (coolingType == CoolingType.HI_ACTIVE_COOLING)
+            {
+                return 45;
+            }
+            return 40;
         }
 
         public static BreachType classifyTemperatureBreach(
@@ -82,12 +76,14 @@ namespace TypewiseAlert
                     break;
             }
         }
-        public static void sendToController(BreachType breachType)
+        public static bool sendToController(BreachType breachType)
         {
             const ushort header = 0xfeed;
             Console.WriteLine("{} : {}\n", header, breachType);
+
+            return true;
         }
-        public static void sendToEmail(BreachType breachType)
+        public static bool sendToEmail(BreachType breachType)
         {
             switch (breachType)
             {
@@ -98,6 +94,8 @@ namespace TypewiseAlert
                     Console.WriteLine("To: {}\n Hi, the temperature is too high\n", "a.b@c.com");
                     break;
             }
+
+            return true;
         }
     }
 }
