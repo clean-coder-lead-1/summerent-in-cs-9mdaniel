@@ -50,31 +50,31 @@ namespace TypewiseAlert.Test
         [Fact]
         public void InfersSendToControllerNormal()
         {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.NORMAL) == true);
+            Assert.True(TypewiseAlert.sendToController(0) == true);
         }
 
         [Fact]
         public void InfersSendToControllerHigh()
         {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.TOO_HIGH) == true);
+            Assert.True(TypewiseAlert.sendToController(2) == true);
         }
 
         [Fact]
         public void InfersSendToControllerLow()
         {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.TOO_LOW) == true);
+            Assert.True(TypewiseAlert.sendToController(1) == true);
         }
 
         [Fact]
         public void InfersSendToEmailLow()
         {
-            Assert.True(TypewiseAlert.sendToEmail(TypewiseAlert.BreachType.TOO_LOW) == true);
+            Assert.True(TypewiseAlert.sendToEmail(1) == true);
         }
 
         [Fact]
         public void InfersSendToEmailHigh()
         {
-            Assert.True(TypewiseAlert.sendToEmail(TypewiseAlert.BreachType.TOO_HIGH) == true);
+            Assert.True(TypewiseAlert.sendToEmail(2) == true);
         }
 
 
