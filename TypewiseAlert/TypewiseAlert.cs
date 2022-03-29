@@ -30,15 +30,21 @@ namespace TypewiseAlert
         };
         public static int findUpperLimit(CoolingType coolingType)
         {
+            int limit = 0;
             switch (coolingType)
             {
                 case CoolingType.PASSIVE_COOLING:
-                    return 35;
+                    limit = 35;
+                    break;
                 case CoolingType.HI_ACTIVE_COOLING:
-                    return 45;
+                    limit = 45;
+                    break;
                 case CoolingType.MED_ACTIVE_COOLING:
-                    return 40;
+                    limit = 40;
+                    break;
             }
+
+            return limit;
         }
 
         public static BreachType classifyTemperatureBreach(
