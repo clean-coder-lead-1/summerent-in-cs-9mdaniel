@@ -76,14 +76,13 @@ namespace TypewiseAlert
                     break;
             }
         }
-        public static BreachType sendToController(BreachType breachType)
+        public static void sendToController(BreachType breachType)
         {
             const ushort header = 0xfeed;
             Console.WriteLine("{} : {}\n", header, breachType);
 
-            return breachType;
         }
-        public static BreachType sendToEmail(BreachType breachType)
+        public static void sendToEmail(BreachType breachType)
         {
             switch (breachType)
             {
@@ -95,7 +94,6 @@ namespace TypewiseAlert
                     break;
             }
 
-            return breachType;
         }
     }
 }
