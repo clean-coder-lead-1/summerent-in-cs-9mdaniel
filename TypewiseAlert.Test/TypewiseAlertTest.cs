@@ -50,7 +50,7 @@ namespace TypewiseAlert.Test
         [Fact]
         public void InfersSendToControllerNormal()
         {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.NORMAL == true));
+            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.NORMAL) == true);
         }
 
         [Fact]
