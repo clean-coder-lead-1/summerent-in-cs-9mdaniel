@@ -46,44 +46,38 @@ namespace TypewiseAlert.Test
             Assert.True(TypewiseAlert.findUpperLimit(TypewiseAlert.CoolingType.MED_ACTIVE_COOLING) ==
               40);
         }
+        /*
+                [Fact]
+                public void InfersSendToControllerNormal()
+                {
+                    Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.NORMAL != true));
+                }
 
-        //Todo
-        [Fact]
-        public void InfersClassifyTemperatureBreach()
-        {
-            Assert.True(TypewiseAlert.classifyTemperatureBreach(TypewiseAlert.CoolingType.PASSIVE_COOLING) ==
-              40);
-        }
+                [Fact]
+                public void InfersSendToControllerHigh()
+                {
+                    Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.TOO_HIGH) != true);
+                }
 
-        [Fact]
-        public void InfersSendToControllerNormal()
-        {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.NORMAL != true));
-        }
+                [Fact]
+                public void InfersSendToControllerLow()
+                {
+                    Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.TOO_LOW) != true);
+                }
 
-        [Fact]
-        public void InfersSendToControllerHigh()
-        {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.TOO_HIGH) != true);
-        }
+                [Fact]
+                public void InfersSendToEmailLow()
+                {
+                    Assert.True(TypewiseAlert.sendToEmail(TypewiseAlert.BreachType.TOO_LOW) != true);
+                }
 
-        [Fact]
-        public void InfersSendToControllerLow()
-        {
-            Assert.True(TypewiseAlert.sendToController(TypewiseAlert.BreachType.TOO_LOW) != true);
-        }
-
-        [Fact]
-        public void InfersSendToEmailLow()
-        {
-            Assert.True(TypewiseAlert.sendToEmail(TypewiseAlert.BreachType.TOO_LOW) != true);
-        }
-
-        [Fact]
-        public void InfersSendToEmailHigh()
-        {
-            Assert.True(TypewiseAlert.sendToEmail(TypewiseAlert.BreachType.TOO_HIGH) != true);
-        }
+                [Fact]
+                public void InfersSendToEmailHigh()
+                {
+                    Assert.True(TypewiseAlert.sendToEmail(TypewiseAlert.BreachType.TOO_HIGH) != true);
+                }
+                */
 
     }
+
 }
