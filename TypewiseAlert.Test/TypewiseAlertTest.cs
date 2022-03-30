@@ -47,6 +47,20 @@ namespace TypewiseAlert.Test
               40);
         }
 
+        [Fact]
+        public void InfersSendToControllerNormal()
+        {
+            try
+            {
+                TypewiseAlert.sendToController(TypewiseAlert.BreachType.NORMAL);
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.False(false);
+            }
+        }
+
         /*        [Fact]
                 public void InfersSendToControllerNormal()
                 {
