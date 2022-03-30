@@ -134,6 +134,23 @@ namespace TypewiseAlert.Test
             }
         }
 
+        [Fact]
+        public void InfersCheckAndAlertEmail()
+        {
+            try
+            {
+                TypewiseAlert.BatteryCharacter batteryCharCool = new TypewiseAlert.BatteryCharacter();
+                batteryCharCool.coolingType = TypewiseAlert.CoolingType.HI_ACTIVE_COOLING;
+
+                TypewiseAlert.checkAndAlert(TypewiseAlert.AlertTarget.TO_EMAIL, batteryCharCool, 32);
+                Assert.True(true);
+            }
+            catch
+            {
+                Assert.False(false);
+            }
+        }
+
 
     }
 
